@@ -1,0 +1,41 @@
+body {
+    background-color: antiquewhite;
+}
+
+.box {
+    width: 40%;
+    margin: 100px auto;
+    padding: 15px;
+    background-color: burlywood;
+}
+
+.butn {
+    width: 19%;
+    background-color: transparent;
+    height: auto;
+    padding: 20px;
+    font-size: large;
+    margin-top: 0.3%;
+}
+
+.butn:hover {
+    background-color: black;
+    color: white;
+}
+
+.display {
+    width: 73%;
+    justify-content: center;
+    margin-bottom: 3px;
+    padding: 2.3%;
+}
+
+.oper {
+    background-color: royalblue;
+}
+
+.calc {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
