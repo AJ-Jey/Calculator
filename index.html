@@ -14,28 +14,28 @@
             <input type="text" class="display" id="result" disabled/>
         </div>
         <div class="button">
-            <button onclick="nums.push('7'); display('7')" class="butn">7</button>
-            <button onclick="nums.push('8'); display('8')" class="butn">8</button>
-            <button onclick="nums.push('9'); display('9')" class="butn">9</button>
+            <button onclick="check(); nums.push('7'); display('7')" class="butn">7</button>
+            <button onclick="check(); nums.push('8'); display('8')" class="butn">8</button>
+            <button onclick="check(); nums.push('9'); display('9')" class="butn">9</button>
             <button onclick="nums.push('*'); display('x')" class="butn oper">x</button>
         </div>
         <div class="button">
-            <button onclick="nums.push('4'); display('4')" class="butn">4</button>
-            <button onclick="nums.push('5'); display('5')" class="butn">5</button>
-            <button onclick="nums.push('6'); display('6')" class="butn">6</button>
+            <button onclick="check(); nums.push('4'); display('4')" class="butn">4</button>
+            <button onclick="check(); nums.push('5'); display('5')" class="butn">5</button>
+            <button onclick="check(); nums.push('6'); display('6')" class="butn">6</button>
             <button onclick="nums.push('/'); display('÷')" class="butn oper">÷</button>
         </div>
         <div class="button">
-            <button onclick="nums.push('1'); display('1')" class="butn">1</button>
-            <button onclick="nums.push('2'); display('2')" class="butn">2</button>
-            <button onclick="nums.push('3'); display('3')" class="butn">3</button>
-            <button onclick="nums.push('+'); display('+')" class="butn oper">+</button>
+            <button onclick="check(); nums.push('1'); display('1')" class="butn">1</button>
+            <button onclick="check(); nums.push('2'); display('2')" class="butn">2</button>
+            <button onclick="check(); nums.push('3'); display('3')" class="butn">3</button>
+            <button onclick="nums.push('+'); display('+'); " class="butn oper">+</button>
             <button onclick="del();" class="oper butn">DEL</button>
         </div>
         <div class="button">
-            <button onclick="nums.push('0'); display('0')" class="butn">0</button>
-            <button onclick="nums.push('.'); display('.')" class="butn">.</button>
-            <button onclick="ans(); display('='); clearScreen(); display(final)" class="butn">=</button>
+            <button onclick="check(); nums.push('0'); display('0')" class="butn">0</button>
+            <button onclick="check(); nums.push('.'); display('.')" class="butn">.</button>
+            <button onclick="ans(); display('='); clearScreen(); display(final)"; x=1 class="butn">=</button>
             <button onclick="nums.push('-'); display('-')" class="butn oper">-</button>
             <button onclick="clearScreen();" class="oper butn">AC</button>
         </div>

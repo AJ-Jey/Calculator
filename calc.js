@@ -1,18 +1,31 @@
-clearScreen()
 nums = []
-function del(test){
-  
-}
+x = 0
 function ans(){
+  if (nums.length != 0){
     joined = nums.join("")
     final = eval(joined)
-    nums = []
+    x=1
+  }
 }
+
+function check(){
+  if(x==1){
+    x=0
+    nums = []
+    clearScreen()
+  }
+}
+
 function display(val){
   document.getElementById('result').value += val
   return val
 }
+
 function clearScreen(){
   document.getElementById('result').value = ''
   nums = []
+}
+
+function del(val){
+
 }
