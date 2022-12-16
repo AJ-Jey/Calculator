@@ -3,7 +3,7 @@ x = 0
 function ans(){
   if (nums.length != 0){
     joined = nums.join("")
-    final = eval(joined)
+    final = eval(joined)    
     x=1
   }
 }
@@ -26,6 +26,11 @@ function clearScreen(){
   nums = []
 }
 
-function del(val){
-
+v=""
+function answer(){
+  if(x==1){
+    x=0
+    v = document.getElementById("result").value
+    nums.push(v)
+  }  
 }
