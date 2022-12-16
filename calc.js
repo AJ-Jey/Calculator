@@ -23,14 +23,15 @@ function display(val){
 
 function clearScreen(){
   document.getElementById('result').value = ''
-  nums = []
 }
 
 v=""
 function answer(){
   if(x==1){
+    clearScreen()
     x=0
     v = document.getElementById("result").value
     nums.push(v)
+    display('ans')
   }  
 }
