@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,12 @@
     <title>Ajai's Calculator</title>
     <link rel="stylesheet" href="styler.css">
 </head>
+
 <body>
     <div class="box">
         <h1 class="calc">Calculator</h1>
         <div class="screen">
-            <input type="text" class="display" id="result" disabled/>
+            <input type="text" class="display" id="result" disabled />
         </div>
         <div class="button">
             <button onclick="check(); nums.push('7'); display('7')" class="butn">7</button>
@@ -24,18 +26,19 @@
             <button onclick="check(); nums.push('5'); display('5')" class="butn">5</button>
             <button onclick="check(); nums.push('6'); display('6')" class="butn">6</button>
             <button onclick="answer(); nums.push('/'); display('÷');" class="butn oper">÷</button>
+            <button onclick="y=1;answer(); display('^');" class="butn oper">^</button>
         </div>
         <div class="button">
             <button onclick="check(); nums.push('1'); display('1')" class="butn">1</button>
             <button onclick="check(); nums.push('2'); display('2')" class="butn">2</button>
             <button onclick="check(); nums.push('3'); display('3')" class="butn">3</button>
             <button onclick="answer(); nums.push('+'); display('+');" class="butn oper">+</button>
-            <!-- <button onclick="del();" class="oper butn">DEL</button> -->
+            <button onclick="del(); z = 1;" class="oper butn">DEL</button>
         </div>
         <div class="button">
             <button onclick="check(); nums.push('0'); display('0')" class="butn">0</button>
             <button onclick="check(); nums.push('.'); display('.')" class="butn">.</button>
-            <button onclick="ans(); display('='); clearScreen(); display(final)"; x=1 class="butn">=</button>
+            <button onclick="ans(); display('='); clearScreen(); display(final); console.log(nums)"; x=1 class="butn">=</button>
             <button onclick="answer(); nums.push('-'); display('-');" class="butn oper">-</button>
             <button onclick="clearScreen();" class="oper butn">AC</button>
         </div>
@@ -43,4 +46,5 @@
     <script src="calc.js">
     </script>
 </body>
+
 </html>

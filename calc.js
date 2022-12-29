@@ -1,5 +1,8 @@
 nums = []
 x = 0
+y=0
+z=0
+test = []
 function ans(){
   if (nums.length != 0){
     joined = nums.join("")
@@ -28,10 +31,29 @@ function clearScreen(){
 v=""
 function answer(){
   if(x==1){
+    v = document.getElementById("result").value
     clearScreen()
     x=0
-    v = document.getElementById("result").value
+    nums = []
     nums.push(v)
     display('ans')
   }  
+}
+
+  test = nums
+  clearScreen() 
+  for(i=0;i<nums.length;i++){
+    if(test[i] == "*"){
+      test[i] = "x"
+    }
+    else if(test[i] == "/"){
+      test[i] = "÷"
+    }
+  }
+  if(z==1 && nums.length <= 1){
+    nums = []
+    clearScreen()
+  }
+  join = test.join("")
+  display(join)
 }
