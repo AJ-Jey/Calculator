@@ -40,6 +40,8 @@ function answer(){
   }  
 }
 
+function del(){
+  nums.pop()
   test = nums
   clearScreen() 
   for(i=0;i<nums.length;i++){
