@@ -1,61 +1,55 @@
 nums = []
-x = 0
-y=0
-z=0
-test = []
-function ans(){
-  if (nums.length != 0){
-    joined = nums.join("")
-    final = eval(joined)    
-    x=1
-  }
+clearScreen()
+x=0
+
+function finalans(){ //calculates answer based on the numbers inputted on click
+    if (nums.length != 0){
+        join = nums.join("")
+        final = eval(join)
+        x=1
+    }
 }
 
-function check(){
-  if(x==1){
-    x=0
-    nums = []
-    clearScreen()
-  }
-}
-
-function display(val){
+function display(val){ //displays the numbers clicked (reason for being able to display the answer)
   document.getElementById('result').value += val
   return val
 }
 
-function clearScreen(){
+function clearScreen(){ //clears the screen therefore also emptying the list
   document.getElementById('result').value = ''
 }
 
-v=""
-function answer(){
+function changer(){ //
   if(x==1){
-    v = document.getElementById("result").value
+    ans = document.getElementById("result").value
     clearScreen()
     x=0
     nums = []
-    nums.push(v)
-    display('ans')
+    nums.push(ans)
+    display(ans)
   }  
 }
 
-function del(){
-  nums.pop()
-  test = nums
-  clearScreen() 
-  for(i=0;i<nums.length;i++){
-    if(test[i] == "*"){
-      test[i] = "x"
-    }
-    else if(test[i] == "/"){
-      test[i] = "÷"
-    }
-  }
-  if(z==1 && nums.length <= 1){
+function check(){ //when a number is clicked after answer is produced it'll be eg.added with the answer
+  if(x==1){
+    x=0
     nums = []
     clearScreen()
   }
-  join = test.join("")
-  display(join)
+}
+
+function del(){
+    nums.pop()
+    test = nums
+    for(i=0;i<nums.length;i++){
+        if(test[i] == "*"){
+        test[i] = "x"
+    }
+    else if(test[i] == "/"){
+        test[i] = "÷"
+    }
+}
+    join = test.join("")
+    clearScreen()
+    display(join) 
 }
