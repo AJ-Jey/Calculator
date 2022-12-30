@@ -20,13 +20,14 @@
             <button onclick="check(); nums.push('8'); display('8')" class="butn">8</button>
             <button onclick="check(); nums.push('9'); display('9')" class="butn">9</button>
             <button onclick="changer(); nums.push('*'); display('x');" class="butn oper">x</button>
+            <button onclick="nums.push(Math.PI); display('π'); alert(nums)" class="butn oper">π</button>
         </div>
         <div class="button">
             <button onclick="check(); nums.push('4'); display('4')" class="butn">4</button>
             <button onclick="check(); nums.push('5'); display('5')" class="butn">5</button>
             <button onclick="check(); nums.push('6'); display('6')" class="butn">6</button>
             <button onclick="changer(); nums.push('/'); display('÷');" class="butn oper">÷</button>
-            <button onclick="" class="butn oper">^</button>
+            <button onclick="changer(); nums.push('**'); display('^');" class="butn oper">^</button>
         </div>
         <div class="button">
             <button onclick="check(); nums.push('1'); display('1')" class="butn">1</button>

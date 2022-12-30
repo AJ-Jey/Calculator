@@ -6,12 +6,13 @@ body {
     width: 40%;
     margin: 100px auto;
     padding: 15px;
-    background-color: burlywood;
+    /* background-color: burlywood; */
+    background-color: grey;
 }
 
 .butn {
     width: 19%;
-    background-color: transparent;
+    background-color: lightgrey;
     height: auto;
     padding: 20px;
     font-size: large;
@@ -24,14 +25,15 @@ body {
 }
 
 .display {
-    width: 73%;
+    width: 93%;
     justify-content: center;
     margin-bottom: 3px;
     padding: 2.3%;
 }
 
 .oper {
-    background-color: royalblue;
+    /* background-color: royalblue; */
+    background-color: greenyellow;
 }
 
 .calc {
