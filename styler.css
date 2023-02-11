@@ -11,6 +11,7 @@ body {
 }
 
 .butn {
+    font-family:Georgia, 'Times New Roman', Times, serif ;
     width: 19%;
     background-color: lightgrey;
     height: auto;

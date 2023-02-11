@@ -11,16 +11,15 @@
 
 <body>
     <div class="box">
-        <h1 class="calc">Calculator</h1>
         <div class="screen">
-            <input type="text" class="display" id="result" disabled />
+            <input placeholder="Ajai Jeyakaran's Calculator" type="text" class="display" id="result" disabled />
         </div>
         <div class="button">
             <button onclick="check(); nums.push('7'); display('7')" class="butn">7</button>
             <button onclick="check(); nums.push('8'); display('8')" class="butn">8</button>
             <button onclick="check(); nums.push('9'); display('9')" class="butn">9</button>
             <button onclick="changer(); nums.push('*'); display('x');" class="butn oper">x</button>
-            <button onclick="nums.push(Math.PI); display('π'); alert(nums)" class="butn oper">π</button>
+            <button onclick="nums.push(Math.PI); display('π');" class="butn oper">π</button>
         </div>
         <div class="button">
             <button onclick="check(); nums.push('4'); display('4')" class="butn">4</button>
@@ -39,9 +38,9 @@
         <div class="button">
             <button onclick="check(); nums.push('0'); display('0')" class="butn">0</button>
             <button onclick="nums.push('.'); display('.')" class="butn">.</button>
-            <button onclick="finalans(); clearScreen(); display(final);" class="butn">=</button>
+            <button onclick="finalans(); clearScreen(); display(final); nums = []" class="butn">=</button>
             <button onclick="changer(); nums.push('-'); display('-');" class="butn oper">-</button>
-            <button onclick="clearScreen();" class="oper butn">AC</button>
+            <button onclick="clearScreen(); nums = []" class="oper butn">AC</button>
         </div>
     </div>
     <script src="calc.js"></script>
