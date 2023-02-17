@@ -1,6 +1,8 @@
 nums = []
 clearScreen()
 x=0
+s=0
+answer = ""
 
 function finalans(){ //calculates answer based on the numbers inputted on click
     if (nums.length != 0){
@@ -19,14 +21,14 @@ function clearScreen(){ //clears the screen therefore also emptying the list
   document.getElementById('result').value = ''
 }
 
-function changer(){ //
+function changer(){  //allows for calculating numbers after pressing equals(operators)
   if(x==1){
     ans = document.getElementById("result").value
     clearScreen()
     x=0
     nums = []
     nums.push(ans)
-    display(ans)
+    display("Ans")
   }  
 }
 
@@ -53,3 +55,45 @@ function del(){
     clearScreen()
     display(join) 
 }
+
+// function squareroot(){
+//   if(s==1){
+//     for(i=0;i<nums.length;i++){
+//       if(nums[i] == "sqrt"){
+//         index = nums.indexOf("sqrt");
+//         console.log(index)
+//         newreplace = Math.sqrt(nums[index+1])
+//         nums.splice(index,2, newreplace)
+//         console.log(nums)
+//         }
+//       } 
+//     }
+//     s=0
+//   }
+
+function squareroot(){
+  if(s==1){
+    for(i=0;i<nums.length;i++){
+      if(nums[i] == "sqrt"){
+        index = nums.indexOf("sqrt");
+        newreplace = Math.sqrt(nums[index+1])
+        if(index!=0){
+          oper = nums[index-1]
+          if(isNaN(parseInt(oper)) == false){
+            nums.splice(index,2,"*", newreplace)
+          }
+          else if(oper != "+" || oper != "-" || oper != "*" || oper != "/"){
+            nums.splice(index,2,newreplace)
+          }
+        }
+        else if(index ==0){
+          nums.splice(index,2, newreplace)
+        }
+        else if(oper != "+" || oper != "-" || oper != "*" || oper != "/"){
+          nums.splice(index,2,"*", newreplace)
+        }
+      } 
+    }
+    }
+    s=0
+  }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,36 +13,42 @@
         <div class="screen">
             <input placeholder="Ajai Jeyakaran's Calculator" type="text" class="display" id="result" disabled />
         </div>
+        <div class="buton">
+            <button onclick="changer(); nums.push('**'); display('^');" class="butn oper">^</button>
+            <button onclick="s=1; changer(); nums.push('sqrt'); display('√'); console.log(nums);" class="butn oper">√</button>
+            <!-- above button is for square root -->
+        </div>
         <div class="button">
             <button onclick="check(); nums.push('7'); display('7')" class="butn">7</button>
             <button onclick="check(); nums.push('8'); display('8')" class="butn">8</button>
             <button onclick="check(); nums.push('9'); display('9')" class="butn">9</button>
-            <button onclick="changer(); nums.push('*'); display('x');" class="butn oper">x</button>
-            <button onclick="nums.push(Math.PI); display('π');" class="butn oper">π</button>
+            <button onclick="del();" class="oper butn">DEL</button>
+            <button onclick="clearScreen(); nums = [];" class="oper butn">AC</button>
+
         </div>
         <div class="button">
             <button onclick="check(); nums.push('4'); display('4')" class="butn">4</button>
             <button onclick="check(); nums.push('5'); display('5')" class="butn">5</button>
             <button onclick="check(); nums.push('6'); display('6')" class="butn">6</button>
+            <button onclick="changer(); nums.push('*'); display('x');" class="butn oper">x</button>
             <button onclick="changer(); nums.push('/'); display('÷');" class="butn oper">÷</button>
-            <button onclick="changer(); nums.push('**'); display('^');" class="butn oper">^</button>
         </div>
         <div class="button">
             <button onclick="check(); nums.push('1'); display('1')" class="butn">1</button>
             <button onclick="check(); nums.push('2'); display('2')" class="butn">2</button>
             <button onclick="check(); nums.push('3'); display('3')" class="butn">3</button>
             <button onclick="changer(); nums.push('+'); display('+');" class="butn oper">+</button>
-            <button onclick="del();" class="oper butn">DEL</button>
+            <button onclick="changer(); nums.push('-'); display('-');" class="butn oper">-</button>
         </div>
         <div class="button">
             <button onclick="check(); nums.push('0'); display('0')" class="butn">0</button>
-            <button onclick="nums.push('.'); display('.')" class="butn">.</button>
-            <button onclick="finalans(); clearScreen(); display(final); nums = []" class="butn">=</button>
-            <button onclick="changer(); nums.push('-'); display('-');" class="butn oper">-</button>
-            <button onclick="clearScreen(); nums = []" class="oper butn">AC</button>
+            <button onclick="nums.push('.'); display('.');" class="butn">.</button>
+            <!-- <button onclick="nums.push(Math.PI); display('π');" class="butn oper">π</button> -->
+            <button onclick="changer(); nums.push('*10**'); display('X10')" class="butn">10^x</button>
+            <button onclick="check(); nums.push(answer); display('Ans');" class="oper butn">Ans</button>
+            <button onclick="squareroot(); finalans(); clearScreen(); display(final); nums = []; answer=final;" class="butn">=</button>
         </div>
     </div>
     <script src="calc.js"></script>
 </body>
-
 </html>
