@@ -40,7 +40,7 @@ function check(){ //when a number is clicked after answer is produced it'll be e
   }
 }
 
-function del(){
+function del(){ //when del button clicked removes last inputted item
     nums.pop()
     test = nums
     for(i=0;i<nums.length;i++){
@@ -56,20 +56,20 @@ function del(){
     display(join) 
 }
 
-// function squareroot(){
-//   if(s==1){
-//     for(i=0;i<nums.length;i++){
-//       if(nums[i] == "sqrt"){
-//         index = nums.indexOf("sqrt");
-//         console.log(index)
-//         newreplace = Math.sqrt(nums[index+1])
-//         nums.splice(index,2, newreplace)
-//         console.log(nums)
-//         }
-//       } 
-//     }
-//     s=0
-//   }
+function squareroot(){
+  if(s==1){
+    for(i=0;i<nums.length;i++){
+      if(nums[i] == "sqrt"){
+        index = nums.indexOf("sqrt");
+        console.log(index)
+        newreplace = Math.sqrt(nums[index+1])
+        nums.splice(index,2, newreplace)
+        console.log(nums)
+        }
+      } 
+    }
+    s=0
+  }
 
 function squareroot(){
   if(s==1){
@@ -97,3 +97,40 @@ function squareroot(){
     }
     s=0
   }
+
+function factorial(){
+  console.log(nums)
+  for(k=0;k<nums.length;k++){
+    nums.join("")
+    if(nums[k] == "!"){
+      num = nums.slice(k-1,k);
+      num = num.join("")
+      proplus = 1;
+        for(i=2;i<=num;i++){
+          proplus = proplus*i;
+          nums.splice(k,1);
+          nums.pop()
+          nums.push(proplus)
+        // }
+      }
+    }
+  }
+}
+
+// nums = ["3", "!"]
+// for(k=0;k<nums.length;k++){
+//   nums.join("")
+//   if(nums[k] == "!"){
+//     num = nums.slice(0,k);
+//     num = num.join("")
+//     proplus = 1;
+//       for(i=2;i<=num;i++){
+//         proplus = proplus*i;
+//         nums.splice(k,1);
+//         nums.pop()
+//         nums.push(proplus)
+//       // }
+//     }
+//   }
+// }
+// console.log(nums);
