@@ -14,7 +14,7 @@
             <input placeholder="Ajai Jeyakaran's Calculator" type="text" class="display" id="result" disabled />
         </div>
         <div class="buton">
-            <button onclick="display('!'); nums.push('!')" class="butn oper">x!</button>
+            <button onclick="n=1; display('!'); nums.push('!')" class="butn oper">x!</button>
             <button onclick="s=1; changer(); nums.push('sqrt'); display('√');" class="butn oper">√</button>
             <button onclick="changer(); nums.push('**'); display('^');" class="butn oper">^</button>
             <!-- above button is for square root -->
@@ -47,7 +47,7 @@
             <!-- <button onclick="nums.push(Math.PI); display('π');" class="butn oper">π</button> -->
             <button onclick="changer(); nums.push('*10**'); display('X10')" class="butn">10^x</button>
             <button onclick="check(); nums.push(answer); display('Ans');" class="oper butn">Ans</button>
-            <button onclick="factorial(); squareroot(); finalans(); clearScreen(); display(final); nums = []; answer=final; console.log(nums);" class="butn">=</button>
+            <button onclick="factorial(); squareroot(); finalans(); clearScreen(); display(final); nums = []; answer=final; console.log(nums);  " class="butn">=</button>
         </div>
     </div>
     <script src="calc.js"></script>

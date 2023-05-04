@@ -116,21 +116,3 @@ function factorial(){
     }
   }
 }
-
-// nums = ["3", "!"]
-// for(k=0;k<nums.length;k++){
-//   nums.join("")
-//   if(nums[k] == "!"){
-//     num = nums.slice(0,k);
-//     num = num.join("")
-//     proplus = 1;
-//       for(i=2;i<=num;i++){
-//         proplus = proplus*i;
-//         nums.splice(k,1);
-//         nums.pop()
-//         nums.push(proplus)
-//       // }
-//     }
-//   }
-// }
-// console.log(nums);
